@@ -21,7 +21,7 @@ export default {
     }
   },
   computed: {
-    currentImages: function() {
+    currentImages() {
       return this.images.slice(0, this.level * 40);
     }
   },
