@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="p-5">
     <h2 class="title is-2">Image test</h2>
-    <ul class="columns is-multiline">
+    <ul class="columns is-multiline is-flex">
       <PlaceholderImage v-for="image, key in currentImages" @eventRemoveFromArray="removeFromArray" :key="key" :src="image.url" :alt="image.title" />
     </ul>
   </div>

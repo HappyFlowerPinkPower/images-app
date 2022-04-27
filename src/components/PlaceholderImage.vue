@@ -19,6 +19,11 @@ export default {
 </script>
 
 <style scoped>
+li {
+  flex: none;
+  width: 50%;
+}
+
 li img {
   cursor: pointer;
 }
