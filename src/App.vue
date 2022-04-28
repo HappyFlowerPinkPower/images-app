@@ -41,7 +41,7 @@ export default {
   },
   mounted() {
     window.addEventListener('scroll', () => {
-      if (document.documentElement.scrollTop + window.innerHeight + 500 > document.documentElement.offsetHeight) this.level += 1;
+      if (document.documentElement.scrollTop + window.innerHeight + 500 > document.documentElement.offsetHeight) this.level++;
 
       if (this.currentImages.length + 960 > this.images.length) this.addItems();
     });
