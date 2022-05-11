@@ -26,11 +26,15 @@ export default {
     }
   },
   methods: {
-    addItems() {
-      fetch('https://jsonplaceholder.typicode.com/photos')
-      .then(data =>  data.json())
-      .then(json => this.images = this.images.concat(json))
-      .catch(error => console.error(error.message));
+    async addItems() {
+      try {
+        const data = await fetch('https://jsonplaceholder.typicode.com/photos');
+        const json = await data.json();
+        
+        this.images = this.images.concat(json);        
+      } catch (err) {
+        console.error(err);
+      }
     },
     removeFromArray(id) {
       this.images.splice(id, 1);
